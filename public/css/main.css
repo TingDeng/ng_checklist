@@ -1,0 +1,10 @@
+
+ul{
+  list-style-image: url('../image/Capture.GIF');
+}
+li{
+  background-image: url();
+}
+h4{
+  text-align: center;
+}
