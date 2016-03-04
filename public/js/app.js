@@ -25,10 +25,7 @@ var app = angular.module('ngChecklist',[]);
  $scope.currentA=singlea;//input will be filled with which has the edit button you click
   $scope.removeA(singlea);
 }
-  $scope.onChecka=function(singlea){
-    singlea = singlea.strike();
-  }
-$scope.checkListb=['Bras','Underwear','Socks','Pajamas','Shirts/Pants/Dresses','Sunglasses','Sun Hat','Sneakers','Slippers','Tolietries']
+$scope.checkListb=['Underwear','Socks','Pajamas','Shirts/Pants/Dresses','Sunglasses','Sun Hat','Sneakers','Slippers','Tolietries']
 $scope.showMe1 = false;
  $scope.myFunc1 = function() {
      $scope.showMe1 = !$scope.showMe1;

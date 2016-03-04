@@ -45,3 +45,6 @@ input{
   border-radius: 8px;
   margin-left: 10px;
 }
+.strikethrough:checked + label{
+  text-decoration:line-through
+}

@@ -27,11 +27,12 @@
        <span class="glyphicon glyphicon-ok pull-right" ng-click='saveA()'></span></div>
       <ul >
         <li  ng-repeat='singlea in checkLista'><!--to repeat thelist one at a time-->
-        <span class="glyphicon glyphicon-home"></span><input type="checkbox" ng-checked='onChecka(singlea)'>{{singlea}}
+        <span class="glyphicon glyphicon-home"></span><input name='packersOff' type="checkbox" class="strikethrough" value="1" ><label for="packersOff">{{singlea}}</label>
         <span class="glyphicon glyphicon-trash pull-right" ng-click='removeA(singlea)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editA(singlea)'></span>
         </li>
       </ul>
+      <button class="btn btn-md ghost" type='button' ng-click='clearA()'>Clear Completed </button>
     </div>
     <div class="col-md-3 col-sm-12">
       <h4>Packing List<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc1()'></span></h4>
@@ -40,12 +41,13 @@
       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveB()'></span></div>
       <ul>
         <li ng-repeat='singleb in checkListb'><!--to repeat thelist one at a time-->
-          <span class="glyphicon glyphicon-lock"></span><input type="checkbox" ng-checked='onCheckb(singleb)'> {{singleb}}
+          <span class="glyphicon glyphicon-lock"></span><input name='packersOff' type="checkbox" class="strikethrough" value="1" ><label for="packersOff">{{singleb}}</label>
 
           <span class="glyphicon glyphicon-trash pull-right" ng-click='removeB(singleb)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editB(singleb)'></span>
         </li>
       </ul>
+      <button class="btn btn-md ghost" type='button' ng-click='clearB()'>Clear Completed </button>
     </div>
     <div class="col-md-3 col-sm-12">
       <h4>Documents<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc2()'></span></h4>
@@ -54,12 +56,13 @@
       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveC()'></span></div>
       <ul >
         <li ng-repeat='singlec in checkListc'><!--to repeat thelist one at a time-->
-        <span class="glyphicon glyphicon-folder-open"></span>  <input type="checkbox" ng-checked='onCheckc(singlec)'> {{singlec}}
+        <span class="glyphicon glyphicon-folder-open"></span><input name='packersOff' type="checkbox" class="strikethrough" value="1" ><label for="packersOff">{{singlec}}</label>
 
           <span class="glyphicon glyphicon-trash pull-right" ng-click='removeC(singlec)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editC(singlec)'></span>
         </li>
       </ul>
+      <button class="btn btn-md ghost" type='button' ng-click='clearC()'>Clear Completed </button>
     </div>
   </div>
       </div>
