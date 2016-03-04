@@ -24,13 +24,13 @@ body{
   background-image: url('../image/da.jpg');
 }
 
-input{
+.inputinfo{
   padding-right: 65px;
   padding-top: 6px;
   padding-bottom:6px;
   border-radius: 8px;
   background-color:#ffffe6;
-  opacity: 0.7;
+  opacity: 0.5;
   margin-bottom: 20px;
   padding: 5px;
   box-shadow: 5px 5px 5px #888888;
@@ -39,11 +39,49 @@ input{
   background-color: transparent;
   border: 1px solid;
   font-weight: bolder;
-  color: #006633;
+  color: #004C26;
   opacity: 1;
   font-size: 18px;
   border-radius: 8px;
   margin-left: 10px;
+}
+#clear{
+  background-color: transparent;
+  border: 1px solid;
+  font-weight: bolder;
+  color: #004C26;
+  opacity: 1;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+#ca{
+  background-color: transparent;
+  border: 1px solid;
+  font-weight: bolder;
+  color: #004C26;
+  opacity: 1;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+#cb{
+  background-color: transparent;
+  border: 1px solid;
+  font-weight: bolder;
+  color: #004C26;
+  opacity: 1;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.weatherinfo{
+  background-image: url('../image/bd.gif');
+  opacity: 0.4;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight:800;
+  box-shadow: 10px 10px 10px #888888;
 }
 .strikethrough:checked + label{
   text-decoration:line-through

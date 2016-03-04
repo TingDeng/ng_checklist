@@ -16,9 +16,9 @@
 <body>
     <div class="row">
       <div class="col-sm-12 col-md-offset-1">
-      <input type="text" placeholder="Gender"></div>
+      <br><input type="text" class='inputinfo' placeholder="Gender"></div>
       <div class="col-sm-12 col-md-offset-1">
-        <input type="text"  placeholder="Destination" id='CityState' name='CityState'>
+        <input type="text" class='inputinfo' placeholder="Destination" id='CityState' name='CityState'>
       <button class="btn btn-md ghost" id='get-weather'type='button'>Submit</button></div>
     </div>
 
@@ -29,7 +29,7 @@
     <div class="col-md-3 col-sm-12">
       <h4>Preparation<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc()'></span></h4>
    <div ng-show='showMe'>
-       <input type="text" placeholder="Add to Checklist" ng-model='currentA'>
+       <input type="text" class='inputinfo' placeholder="Add to Checklist" ng-model='currentA'>
        <span class="glyphicon glyphicon-ok pull-right" ng-click='saveA()'></span></div>
       <ul >
         <li  ng-repeat='singlea in checkLista'><!--to repeat thelist one at a time-->
@@ -38,12 +38,12 @@
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editA(singlea)'></span>
         </li>
       </ul>
-      <button class="btn btn-md ghost" type='button' ng-click='clearA()'>Clear Completed </button>
+      <button class="btn btn-md ghost pull-right" type='button'id='ca' ng-click='clearA()'>Clear Completed </button>
     </div>
     <div class="col-md-3 col-sm-12">
       <h4>Packing List<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc1()'></span></h4>
       <div ng-show='showMe1'>
-      <input type="text" placeholder="Add to Checklist"ng-model='currentB'>
+      <input type="text" class='inputinfo' placeholder="Add to Checklist"ng-model='currentB'>
       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveB()'></span></div>
       <ul>
         <li ng-repeat='singleb in checkListb'><!--to repeat thelist one at a time-->
@@ -53,12 +53,12 @@
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editB(singleb)'></span>
         </li>
       </ul>
-      <button class="btn btn-md ghost" type='button' ng-click='clearB()'>Clear Completed </button>
+      <button class="btn btn-md ghost pull-right" id='cb'type='button' ng-click='clearB()'>Clear Completed </button>
     </div>
     <div class="col-md-3 col-sm-12">
-      <h4>Documents<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc2()'></span></h4>
+      <h4>Identification <span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc2()'></span></h4>
       <div ng-show='showMe2'>
-      <input type="text" placeholder="Add to Checklist" ng-model='currentC'>
+      <input type="text" class='inputinfo' placeholder="Add to Checklist" ng-model='currentC'>
       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveC()'></span></div>
       <ul >
         <li ng-repeat='singlec in checkListc'><!--to repeat thelist one at a time-->
@@ -68,11 +68,13 @@
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editC(singlec)'></span>
         </li>
       </ul>
-      <button class="btn btn-md ghost" type='button' ng-click='clearC()'>Clear Completed </button>
+      <button class="btn btn-md ghost pull-right" id='clear'type='button' ng-click='clearC()'>Clear Completed </button>
     </div>
    <div id="output"></div>
-   <div class="col-md-3 col-sm-12">
+
   <script id="summary" type='text/x-handlebars-template'>
+  <div class='col-md-3 col-sm-12 weatherinfo'>
+    <h4>Local Weather info</h4>
   <div>Current Time: {{currentTime}}</div>
   <div>City:{{city}}</div>
   <div>Summary: {{summary}}</div>
@@ -81,9 +83,10 @@
   <div>Wind Speed: {{windSpeed}}</div>
   <div>Wind Bearing: {{windDirection}}</div>
   <img src='../image/{{icon}}.png' alt={{icon}}>
+</div>
 </script>
 
-   </div>
+
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>

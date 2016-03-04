@@ -5,7 +5,7 @@ var app = angular.module('ngChecklist',[]);
   //  $scope.save(){
    //
   //  }
-   $scope.checkLista=['Check Passport','Check-in Online','Check Flight Info','Check Baggage Weight','Wash Clothing','Empty Trash','Turn Off Air Conditioner']
+   $scope.checkLista=['Check Passport','Check-in Online','Check Flight Info','Check Baggage Weight','Book a Hotel','Rent a Car','Wash Clothing','Empty Trash','Turn Off Air Conditioner']
    $scope.showMe = false;
     $scope.myFunc = function() {
         $scope.showMe = !$scope.showMe;
@@ -25,7 +25,7 @@ var app = angular.module('ngChecklist',[]);
  $scope.currentA=singlea;//input will be filled with which has the edit button you click
   $scope.removeA(singlea);
 }
-$scope.checkListb=['Underwear','Socks','Pajamas','Shirts/Pants/Dresses','Sunglasses','Sun Hat','Sneakers','Slippers','Tolietries']
+$scope.checkListb=['Charger','Underwear','Socks','Pajamas','Shirts/Pants/Dresses','Sunglasses','Sun Hat','Sneakers','Slippers','Tolietries','Sunblock','Umbrella','Swimming suit']
 $scope.showMe1 = false;
  $scope.myFunc1 = function() {
      $scope.showMe1 = !$scope.showMe1;
@@ -44,7 +44,7 @@ $scope.editB=function(singleb){
 $scope.currentB=singleb;//input will be filled with which has the edit button you click
 $scope.removeB(singleb);
 }
- $scope.checkListc=['Drivers License','Hotel Confirmation','Itineraries','Tickets','StudentID']
+ $scope.checkListc=['Drivers License','Reservation/Confirmation','Itineraries','Tickets','StudentID','Wallet','Keys']
  $scope.showMe2 = false;
   $scope.myFunc2 = function() {
       $scope.showMe2 = !$scope.showMe2;
