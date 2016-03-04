@@ -35,7 +35,7 @@ input{
   padding: 5px;
   box-shadow: 5px 5px 5px #888888;
 }
-.ghost{
+#get-weather{
   background-color: transparent;
   border: 1px solid;
   font-weight: bolder;
