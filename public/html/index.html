@@ -8,48 +8,60 @@
  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class='container' ng-controller='checklistController'>
     <div class="row">
-    <div class="col-md-3 col-sm-12">
-      <h4>Preparation</h4>
-      <ul >
-        <li class='well'ng-repeat='single in checkList'><!--to repeat thelist one at a time-->
-          {{single}}
-          <button type="button" name="button" class="btn btn-info btn-sm pull-right" ng-click='editTodo(singleTodo)'>Edit</button>
-          <button class="btn btn-danger btn-sm pull-right" type='button'ng-click='removeTodo(singleTodo)'>X</button>
-          <span class="glyphicon glyphicon-arrow-up pull-right" ng-if='$index!=0'ng-click='moveUp(singleTodo)'></span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-3 col-sm-12">
-      <h4>Packing List</h4>
-      <ul >
-        <li class='well'ng-repeat='single in checkList'><!--to repeat thelist one at a time-->
-          {{single}}
-          <button type="button" name="button" class="btn btn-info btn-sm pull-right" ng-click='editTodo(singleTodo)'>Edit</button>
-          <button class="btn btn-danger btn-sm pull-right" type='button'ng-click='removeTodo(singleTodo)'>X</button>
-          <span class="glyphicon glyphicon-arrow-up pull-right" ng-if='$index!=0'ng-click='moveUp(singleTodo)'></span>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-3 col-sm-12">
-      <h4>Documents</h4>
-      <ul >
-        <li class='well'ng-repeat='single in checkList'><!--to repeat thelist one at a time-->
-          {{single}}
-          <button type="button" name="button" class="btn btn-info btn-sm pull-right" ng-click='editTodo(singleTodo)'>Edit</button>
-          <button class="btn btn-danger btn-sm pull-right" type='button'ng-click='removeTodo(singleTodo)'>X</button>
-          <span class="glyphicon glyphicon-arrow-up pull-right" ng-if='$index!=0'ng-click='moveUp(singleTodo)'></span>
-        </li>
-      </ul>
+      <div class="col-sm-12 col-md-offset-1">
+      <input type="text" placeholder="Gender"></div>
+      <div class="col-sm-12 col-md-offset-1">
+        <input type="text"  placeholder="Destination">
+      <button class="btn btn-md ghost" ng-click='checkweather()' type='button'>Submit</button></div>
     </div>
 
-        <div class="col-md-3 col-sm-12">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="What do you need to do?" ng-model='currentTodo'>
-            <button class="btn btn-primary btn-block" ng-click='saveTodo()' type='button'>Save Todo!</button>
-          </div>
-        </div>
+
+  <div class='container' ng-controller='checklistController'>
+    <div class="row">
+      <div class='back'>
+    <div class="col-md-3 col-sm-12">
+      <h4>Preparation<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc()'></span></h4>
+   <div ng-show='showMe'>
+       <input type="text" placeholder="Add to Checklist" ng-model='currentA'>
+       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveA()'></span></div>
+      <ul >
+        <li  ng-repeat='singlea in checkLista'><!--to repeat thelist one at a time-->
+        <span class="glyphicon glyphicon-home"></span><input type="checkbox" ng-checked='onChecka(singlea)'>{{singlea}}
+        <span class="glyphicon glyphicon-trash pull-right" ng-click='removeA(singlea)'></span>
+          <span class="glyphicon glyphicon-edit pull-right" ng-click='editA(singlea)'></span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <h4>Packing List<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc1()'></span></h4>
+      <div ng-show='showMe1'>
+      <input type="text" placeholder="Add to Checklist"ng-model='currentB'>
+      <span class="glyphicon glyphicon-ok pull-right" ng-click='saveB()'></span></div>
+      <ul>
+        <li ng-repeat='singleb in checkListb'><!--to repeat thelist one at a time-->
+          <span class="glyphicon glyphicon-lock"></span><input type="checkbox" ng-checked='onCheckb(singleb)'> {{singleb}}
+
+          <span class="glyphicon glyphicon-trash pull-right" ng-click='removeB(singleb)'></span>
+          <span class="glyphicon glyphicon-edit pull-right" ng-click='editB(singleb)'></span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <h4>Documents<span class="glyphicon glyphicon-plus pull-right" ng-click='myFunc2()'></span></h4>
+      <div ng-show='showMe2'>
+      <input type="text" placeholder="Add to Checklist" ng-model='currentC'>
+      <span class="glyphicon glyphicon-ok pull-right" ng-click='saveC()'></span></div>
+      <ul >
+        <li ng-repeat='singlec in checkListc'><!--to repeat thelist one at a time-->
+        <span class="glyphicon glyphicon-folder-open"></span>  <input type="checkbox" ng-checked='onCheckc(singlec)'> {{singlec}}
+
+          <span class="glyphicon glyphicon-trash pull-right" ng-click='removeC(singlec)'></span>
+          <span class="glyphicon glyphicon-edit pull-right" ng-click='editC(singlec)'></span>
+        </li>
+      </ul>
+    </div>
+  </div>
       </div>
     </div>
 

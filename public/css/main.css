@@ -1,10 +1,47 @@
 
 ul{
-  list-style-image: url('../image/Capture.GIF');
+list-style: none;
+background-image: url('../image/bd.gif');
+opacity: 0.4;
+border-radius: 8px;
+padding: 10px;
+font-weight:800;
+box-shadow: 10px 10px 10px #888888;
 }
 li{
-  background-image: url();
+  margin-top: 10px;
+
 }
 h4{
   text-align: center;
+  font-weight: bolder;
+  color: #006633;
+  opacity: 0.8;
+}
+
+
+body{
+  background-image: url('../image/da.jpg');
+}
+
+input{
+  padding-right: 65px;
+  padding-top: 6px;
+  padding-bottom:6px;
+  border-radius: 8px;
+  background-color:#ffffe6;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px #888888;
+}
+.ghost{
+  background-color: transparent;
+  border: 1px solid;
+  font-weight: bolder;
+  color: #006633;
+  opacity: 1;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-left: 10px;
 }
