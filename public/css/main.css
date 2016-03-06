@@ -51,9 +51,8 @@ body{
   font-weight: bolder;
   color: #004C26;
   opacity: 1;
-  font-size: 18px;
+  font-size: 10px;
   border-radius: 8px;
-  margin-left: 10px;
 }
 #ca{
   background-color: transparent;
@@ -61,9 +60,9 @@ body{
   font-weight: bolder;
   color: #004C26;
   opacity: 1;
-  font-size: 18px;
+  font-size: 10px;
   border-radius: 8px;
-  margin-left: 10px;
+
 }
 #cb{
   background-color: transparent;
@@ -71,9 +70,8 @@ body{
   font-weight: bolder;
   color: #004C26;
   opacity: 1;
-  font-size: 18px;
+  font-size: 10px;
   border-radius: 8px;
-  margin-left: 10px;
 }
 .weatherinfo{
   background-image: url('../image/bd.gif');

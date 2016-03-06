@@ -44,6 +44,7 @@ $scope.editB=function(singleb){
 $scope.currentB=singleb;//input will be filled with which has the edit button you click
 $scope.removeB(singleb);
 }
+
  $scope.checkListc=['Drivers License','Reservation/Confirmation','Itineraries','Tickets','StudentID','Wallet','Keys']
  $scope.showMe2 = false;
   $scope.myFunc2 = function() {
@@ -63,6 +64,7 @@ $scope.checkListc.splice(0,0,cInfo);
  $scope.currentC=singlec;//input will be filled with which has the edit button you click
  $scope.removeC(singlec);
  }
+ 
 
  });
 
