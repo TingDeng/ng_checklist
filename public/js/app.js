@@ -64,9 +64,28 @@ $scope.checkListc.splice(0,0,cInfo);
  $scope.currentC=singlec;//input will be filled with which has the edit button you click
  $scope.removeC(singlec);
  }
- 
+  $scope.clearB=function(){
+     $scope.checkListb=$scope.checkListb.filter(function(singleb){
+       for(var i = checkListb.length-1;i>=0; i-=1){
+       return !checkListb[i].checked;
+   }
+     })
+   }
+// $scope.clearB=function(){
+//   var rmvCheckBoxes= $scope.checkListb;
+//   for(var i = 0; i < rmvCheckBoxes.length; i++)
+//   {    rmvCheckBoxes[i]=singleb
+//       if(rmvCheckBoxes[i].checked==true)
+//       {
+//        $scope.removeB(rmvCheckBoxes[i]);
+//       }
+//   }
+// }
 
  });
+
+
+
 
  var locationFormat= null;
 $(document).ready(function(){
