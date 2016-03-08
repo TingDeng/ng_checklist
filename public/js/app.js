@@ -59,9 +59,11 @@ var app = angular.module('ngChecklist',[]);
      $scope.checkLista.splice(position,1);//1 means how many you want to remove at and after the index
    }
    $scope.editA=function(singlea){
+     $scope.currentA='';
  if($scope.showMe === false){$scope.showMe = !$scope.showMe;}
  $scope.currentA=singlea.desc;//input will be filled with which has the edit button you click
   $scope.removeA(singlea);
+
 }
 $scope.checkListb=[
   {
@@ -120,9 +122,11 @@ $scope.removeB= function(singleb){
   $scope.checkListb.splice(position,1);//1 means how many you want to remove at and after the index
 }
 $scope.editB=function(singleb){
+   $scope.currentB='';
   if($scope.showMe1 === false){$scope.showMe1 = !$scope.showMe1;}
 $scope.currentB=singleb.desc;//input will be filled with which has the edit button you click
 $scope.removeB(singleb);
+
 }
 
  $scope.checkListc=[
@@ -168,6 +172,7 @@ $scope.checkListc.splice(0,0,cInfo);
   $scope.checkListc.splice(position,1);//1 means how many you want to remove at and after the index
 }
  $scope.editC=function(singlec){
+    $scope.currentC='';
    if($scope.showMe2 === false){$scope.showMe2 = !$scope.showMe2;}
  $scope.currentC=singlec.desc;//input will be filled with which has the edit button you click
  $scope.removeC(singlec);
