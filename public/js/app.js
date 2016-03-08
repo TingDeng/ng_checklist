@@ -5,13 +5,51 @@ var app = angular.module('ngChecklist',[]);
   //  $scope.save(){
    //
   //  }
-   $scope.checkLista=['Check Passport','Check-in Online','Check Flight Info','Check Baggage Weight','Book a Hotel','Rent a Car','Wash Clothing','Empty Trash','Turn Off Air Conditioner']
+   $scope.checkLista=[
+     {
+       desc:'Check Passport',
+       completed: false
+     },{
+       desc:'Check-in Online',
+       completed: false
+     },
+     {
+       desc:'Check Flight Info',
+       completed: false
+     },
+     {
+       desc:'Check Baggage Weight',
+       completed: false
+     },
+     {
+       desc:'Book a Hotel',
+       completed: false
+     },
+     {
+       desc:'Rent a Car',
+       completed: false
+     },
+     {
+       desc:'Wash Clothing',
+       completed: false
+     },
+     {
+       desc:'Empty Trash',
+       completed: false
+     },
+     {
+       desc:'Turn Off Air Conditioner',
+       completed: false
+     },
+
+   ];
+
    $scope.showMe = false;
     $scope.myFunc = function() {
         $scope.showMe = !$scope.showMe;
     }
     $scope.saveA=function(){
-    var aInfo=$scope.currentA;
+    var aInfo={desc:$scope.currentA,completed:false};
     $scope.checkLista.splice(0,0,aInfo);
     $scope.currentA='';
 
@@ -22,16 +60,58 @@ var app = angular.module('ngChecklist',[]);
    }
    $scope.editA=function(singlea){
  if($scope.showMe === false){$scope.showMe = !$scope.showMe;}
- $scope.currentA=singlea;//input will be filled with which has the edit button you click
+ $scope.currentA=singlea.desc;//input will be filled with which has the edit button you click
   $scope.removeA(singlea);
 }
-$scope.checkListb=['Charger','Underwear','Socks','Pajamas','Shirts/Pants/Dresses','Sunglasses','Sun Hat','Sneakers','Slippers','Tolietries','Sunblock','Umbrella','Swimming suit']
+$scope.checkListb=[
+  {
+    desc:'Charger',
+    completed: false
+  },{
+    desc:'Underwear',
+    completed: false
+  },{
+    desc:'Socks',
+    completed: false
+  },{
+    desc:'Pajamas',
+    completed: false
+  },{
+    desc:'Shirts/Pants/Dresses',
+    completed: false
+  },{
+    desc:'Sunglasses',
+    completed: false
+  },{
+    desc:'Sun Hat',
+    completed: false
+  },{
+    desc:'Sneakers',
+    completed: false
+  },{
+    desc:'Slippers',
+    completed: false
+  },{
+    desc:'Tolietries',
+    completed: false
+  },{
+    desc:'Sunblock',
+    completed: false
+  },{
+    desc:'Umbrella',
+    completed: false
+  },{
+    desc:'Swimming suit',
+    completed: false
+  },
+
+];
 $scope.showMe1 = false;
  $scope.myFunc1 = function() {
      $scope.showMe1 = !$scope.showMe1;
  }
  $scope.saveB=function(){
- var bInfo=$scope.currentB;
+ var bInfo={desc:$scope.currentB, completed:false};
  $scope.checkListb.splice(0,0,bInfo);
  $scope.currentB='';
 }
@@ -41,17 +121,45 @@ $scope.removeB= function(singleb){
 }
 $scope.editB=function(singleb){
   if($scope.showMe1 === false){$scope.showMe1 = !$scope.showMe1;}
-$scope.currentB=singleb;//input will be filled with which has the edit button you click
+$scope.currentB=singleb.desc;//input will be filled with which has the edit button you click
 $scope.removeB(singleb);
 }
 
- $scope.checkListc=['Drivers License','Reservation/Confirmation','Itineraries','Tickets','StudentID','Wallet','Keys']
+ $scope.checkListc=[
+   {
+     desc:'Swimming suit',
+     completed: false
+   },{
+     desc:'Drivers License',
+     completed: false
+   },{
+     desc:'Reservation/Confirmation',
+     completed: false
+   },{
+     desc:'Itineraries',
+     completed: false
+   },{
+     desc:'Tickets',
+     completed: false
+   },{
+     desc:'StudentID',
+     completed: false
+   },{
+     desc:'Wallet',
+     completed: false
+   },
+   {
+     desc:'Keys',
+     completed: false
+   },
+
+ ];
  $scope.showMe2 = false;
   $scope.myFunc2 = function() {
       $scope.showMe2 = !$scope.showMe2;
   }
   $scope.saveC=function(){
-  var cInfo=$scope.currentC;
+  var cInfo={desc:$scope.currentC,completed:false};
 $scope.checkListc.splice(0,0,cInfo);
   $scope.currentC='';
 }
@@ -61,16 +169,44 @@ $scope.checkListc.splice(0,0,cInfo);
 }
  $scope.editC=function(singlec){
    if($scope.showMe2 === false){$scope.showMe2 = !$scope.showMe2;}
- $scope.currentC=singlec;//input will be filled with which has the edit button you click
+ $scope.currentC=singlec.desc;//input will be filled with which has the edit button you click
  $scope.removeC(singlec);
+
  }
-  $scope.clearB=function(){
-     $scope.checkListb=$scope.checkListb.filter(function(singleb){
-       for(var i = checkListb.length-1;i>=0; i-=1){
-       return !checkListb[i].checked;
+  $scope.clearA=function(){
+     var clearOnes = $scope.checkLista.filter(function(item){
+       return item.completed;
+     });
+
+     angular.forEach(clearOnes, function(eachOne){
+       var index = $scope.checkLista.indexOf(eachOne);
+       $scope.checkLista.splice(index, 1);
+     });
+
    }
-     })
-   }
+   $scope.clearB=function(){
+      var clearbs = $scope.checkListb.filter(function(item1){
+        return item1.completed;
+      });
+
+      angular.forEach(clearbs, function(eachOneb){
+        var index = $scope.checkListb.indexOf(eachOneb);
+        $scope.checkListb.splice(index, 1);
+      });
+
+    }
+    $scope.clearC=function(){
+       var clearOnes = $scope.checkListc.filter(function(item2){
+         return item2.completed;
+       });
+
+       angular.forEach(clearOnes, function(eachOnec){
+         var index = $scope.checkListc.indexOf(eachOnec);
+         $scope.checkListc.splice(index, 1);
+       });
+
+     }
+
 // $scope.clearB=function(){
 //   var rmvCheckBoxes= $scope.checkListb;
 //   for(var i = 0; i < rmvCheckBoxes.length; i++)

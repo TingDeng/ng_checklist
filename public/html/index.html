@@ -33,9 +33,9 @@
        <span class="glyphicon glyphicon-ok pull-right" ng-click='saveA()'></span></div>
       <ul >
         <input type='checkbox'onclick="var w = document.getElementsByClassName('lista'); for(var i = 0; i < w.length; i++){ if(w[i].type='checkbox'){ w[i].checked = this.checked;};};"><label>Check All</label>
-      <button class="btn btn-sm ghost pull-right" type='button' id='ca'>Clear Completed </button>
+      <button class="btn btn-sm ghost pull-right" type='button' id='ca' ng-click='clearA()'>Clear Completed </button>
         <li  ng-repeat='singlea in checkLista'><!--to repeat thelist one at a time-->
-        <span class="glyphicon glyphicon-home"></span><input name='packersOff' type="checkbox" class="strikethrough lista" value="1" ><label for="packersOff">{{singlea}}</label>
+        <span class="glyphicon glyphicon-home"></span><input name='packersOff' ng-click='singlea.completed = !singlea.completed;' type="checkbox" ng-checked='singlea.completed' class="strikethrough lista" value="1" ><label for="packersOff">{{singlea.desc}}</label>
         <span class="glyphicon glyphicon-trash pull-right" ng-click='removeA(singlea)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editA(singlea)'></span>
         </li>
@@ -50,7 +50,7 @@
       <input type='checkbox'onclick="var w = document.getElementsByClassName('listb'); for(var i = 0; i < w.length; i++){ if(w[i].type='checkbox'){ w[i].checked = this.checked;};};"><label>Check All</label>
      <button class="btn btn-sm ghost pull-right" id='cb'type='button' ng-click='clearB()'>Clear Completed </button>
         <li ng-repeat='singleb in checkListb'><!--to repeat thelist one at a time-->
-          <span class="glyphicon glyphicon-lock"></span><input name='packersOff' type="checkbox" class="strikethrough listb" value="1"><label for="packersOff">{{singleb}}</label>
+          <span class="glyphicon glyphicon-lock"></span><input name='packersOff' type="checkbox" ng-click='singleb.completed = !singleb.completed;' class="strikethrough listb" value="1"><label for="packersOff">{{singleb.desc}}</label>
 
           <span class="glyphicon glyphicon-trash pull-right" ng-click='removeB(singleb)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editB(singleb)'></span>
@@ -66,9 +66,9 @@
       <span class="glyphicon glyphicon-ok pull-right" ng-click='saveC()'></span></div>
       <ul >
         <input type='checkbox'onclick="var w = document.getElementsByClassName('listc'); for(var i = 0; i < w.length; i++){ if(w[i].type='checkbox'){ w[i].checked = this.checked;};};"><label>Check All</label>
-        <button class="btn btn-sm ghost pull-right" id='clear'type='button'>Clear Completed</button>
+        <button class="btn btn-sm ghost pull-right" id='clear'type='button' ng-click='clearC()'>Clear Completed</button>
         <li ng-repeat='singlec in checkListc'><!--to repeat thelist one at a time-->
-        <span class="glyphicon glyphicon-folder-open"></span><input name='packersOff' type="checkbox" class="strikethrough listc" value="1" ><label for="packersOff">{{singlec}}</label>
+        <span class="glyphicon glyphicon-folder-open"></span><input name='packersOff' type="checkbox" ng-click='singlec.completed = !singlec.completed;'class="strikethrough listc" value="1" ><label for="packersOff">{{singlec.desc}}</label>
 
           <span class="glyphicon glyphicon-trash pull-right" ng-click='removeC(singlec)'></span>
           <span class="glyphicon glyphicon-edit pull-right" ng-click='editC(singlec)'></span>
